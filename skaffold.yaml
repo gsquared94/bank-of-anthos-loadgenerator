@@ -14,6 +14,8 @@
 
 apiVersion: skaffold/v2beta11
 kind: Config
+metadata:
+  name: loadgenerator
 build:
   artifacts:
   - image: loadgenerator
@@ -21,3 +23,7 @@ deploy:
   kubectl:
     manifests:
     - ./loadgenerator.yaml
+profiles:
+- name: cloudbuild
+  build:
+    googleCloudBuild: {}
