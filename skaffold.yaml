@@ -16,9 +16,6 @@ apiVersion: skaffold/v2beta12
 kind: Config
 metadata:
   name: loadgenerator
-requires:
-  - git:
-      repo: https://github.com/gsquared94/bank-of-anthos-frontend
 build:
   artifacts:
   - image: loadgenerator
